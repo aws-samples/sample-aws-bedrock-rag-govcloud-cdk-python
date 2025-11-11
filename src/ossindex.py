@@ -82,7 +82,7 @@ def handler(event, context):
                 },
             }
 
-            response = client.indices.create(index_name, body=index_body)
+            response = client.indices.create(index=index_name, body=index_body)
 
             log(f"Response: {response}")
             log("Sleeping for 1 minutes to let index create.")
